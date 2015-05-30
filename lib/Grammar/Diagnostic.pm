@@ -21,7 +21,7 @@ class Grammar::Diagnostic:ver<0.01>
     for @.match_pair_stack -> $match
     {
       my $location = self.match_location($match);
-      @unmatched.push("Did not find matching token for '{self.match_text($match)}' line {$location<line>}, column {$location<column>}");
+      @unmatched.push("Did not find matching token for '{$match.Str}' line {$location<line>}, column {$location<column>}");
     }
 
     return @unmatched;
@@ -38,12 +38,6 @@ class Grammar::Diagnostic:ver<0.01>
     my $substring = $match.orig.substr(0, $match.from);
     my @lines = $substring.split(/\n/);
     return { line => @lines.elems, column => @lines[*-1].chars };
-  }
-
-  # returns the match text
-  method match_text (Match:D $match)
-  {
-    return $match.orig.substr($match.from, $match.to - $match.from);
   }
 }
 

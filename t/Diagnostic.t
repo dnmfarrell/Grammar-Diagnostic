@@ -18,8 +18,7 @@ subtest
   is $match_location<column>, 4, 'match location column number is correct';
 
   # match_text
-  ok my $match_text = $diag.match_text($match), 'get match text';
-  is $match_text, 'doing', 'match text matches expected';
+  is $match.Str, 'doing', 'match text matches expected';
 }, 'Match location and text';
 
 subtest
