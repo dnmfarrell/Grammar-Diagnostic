@@ -1,0 +1,23 @@
+=pod
+
+=head1 NAME
+
+Grammar::Diagnostic - print Perl 6 Grammar debug msgs more easily
+
+=head1 SYNOPSIS
+
+  use Grammar::Diagnostic;
+
+  my $diag = Grammar::Diagnostic.new;
+
+  ...
+
+=head1 LICENSE
+
+FreeBSD, see LICENSE
+
+=head1 AUTHOR
+
+David Farrell, (C) 2015
+
+=cut

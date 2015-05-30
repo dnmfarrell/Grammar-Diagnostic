@@ -1,0 +1,12 @@
+{
+    "name" : "Grammar::Diagnostic",
+    "version" : "0.01",
+    "description" : "Makes it easier to print Grammar debug messages",
+    "author" : "David Farrell",
+    "source-url" : "",
+    "depends" : [ ],
+    "provides" : {
+      "Grammar::Diagnostic" : "Grammar-Diagnostic/lib/Grammar/Diagnostic.pm",
+    },
+}
+
